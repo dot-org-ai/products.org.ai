@@ -1,11 +1,22 @@
 ---
 title: Smartphone
 description: Smartphones - Mobile Devices product
+$type:
+  - https://products.org.ai/TechnologyComputers
+  - https://products.org.ai/MobileDevices
+  - https://products.org.ai/Smartphone
+  - https://schema.org/Product
+  - https://www.wikidata.org/wiki/Q22645
+  - https://en.wikipedia.org/wiki/Smartphone
+digital: 1
 ---
 
 import { Breadcrumb, BreadcrumbItem } from 'fumadocs-ui/components/breadcrumb'
 import { Tabs, Tab } from 'fumadocs-ui/components/tabs'
 import { Callout } from 'fumadocs-ui/components/callout'
+import { WikipediaInfobox } from 'components.do'
+
+export { frontmatter } from '@/.source'
 
 <Breadcrumb>
   <BreadcrumbItem href="/">Home</BreadcrumbItem>
@@ -16,11 +27,9 @@ import { Callout } from 'fumadocs-ui/components/callout'
 
 # Smartphone
 
-handheld mobile telephone/computer
+Smartphones - Mobile Devices product
 
-## Image
-
-![smartphone](http://commons.wikimedia.org/wiki/Special:FilePath/HA0478-006%20%286011470974%29.jpg)
+<WikipediaInfobox $type={frontmatter.$type} />
 
 ## Classification
 

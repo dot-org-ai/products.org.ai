@@ -55,6 +55,14 @@ const generateProductMDX = (product) => {
   return `---
 title: ${product.name}
 description: ${description}
+$type:
+  - https://products.org.ai/${product.category.name}
+  - https://products.org.ai/${product.subcategory.name}
+  - https://products.org.ai/${product.titleCase}
+  - https://schema.org/Product
+  - https://www.wikidata.org/wiki/${product.wikidata}
+  - ${product.wikipedia}
+digital: ${product.digital}
 ---
 
 import { Breadcrumb, BreadcrumbItem } from 'fumadocs-ui/components/breadcrumb'
