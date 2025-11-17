@@ -1,0 +1,129 @@
+---
+$id: https://products.org.ai/Product
+$context: https://schema.org.ai
+$type: Type
+name: Product
+description: A product is anything that can be offered to a market that might satisfy a want or need
+extends: https://schema.org/Product
+digital: 0.5
+category: CoreType
+---
+
+[Thing](https://schema.org.ai/Thing) > Product
+
+# Product
+
+A product is anything that can be offered to a market that might satisfy a want or need. This is the base type for all product types in the products.org.ai ontology.
+
+## Properties
+
+| Property | Type | Description | Inherited From |
+|----------|------|-------------|----------------|
+| name | Text | The name of the product | Thing |
+| description | Text | A description of the product | Thing |
+| image | URL | An image of the product | Thing |
+| url | URL | URL of the product | Thing |
+| brand | Brand \| Organization | The brand associated with the product | Product |
+| manufacturer | Organization | The manufacturer of the product | Product |
+| model | Text | The model of the product | Product |
+| productID | Text | The product identifier | Product |
+| category | Text \| Thing | Category of the product | Product |
+| gtin | Text | Global Trade Item Number | Product |
+| mpn | Text | Manufacturer Part Number | Product |
+| sku | Text | Stock Keeping Unit | Product |
+| material | Text \| URL | Material the product is made from | Product |
+| color | Text | The color of the product | Product |
+| weight | QuantitativeValue | The weight of the product | Product |
+| width | QuantitativeValue | The width of the product | Product |
+| height | QuantitativeValue | The height of the product | Product |
+| depth | QuantitativeValue | The depth of the product | Product |
+
+## Extended Properties
+
+This ontology extends Schema.org Product with additional classification properties:
+
+| Property | Type | Description |
+|----------|------|-------------|
+| gpc | GPCClassification | GS1 Global Product Classification |
+| unspsc | Text | UNSPSC commodity code |
+| wikidata | URL | Wikidata QID reference |
+| wikipedia | URL | Wikipedia article URL |
+| digital | Number | Digital score (0.0-1.0) |
+
+## Classification
+
+Products in this ontology are classified using multiple authoritative systems:
+
+- **GS1 GPC** - Global Product Classification (4-level hierarchy)
+- **UNSPSC** - United Nations Standard Products and Services Code
+- **Wikidata** - Semantic knowledge graph references
+- **Wikipedia** - Human-readable documentation
+
+## Examples
+
+```typescript
+import { $ } from '@org.ai/products'
+
+// Create a basic product
+const laptop = $.Product.create({
+  name: 'ThinkPad X1 Carbon',
+  description: 'Business ultrabook laptop',
+  manufacturer: 'Lenovo',
+  model: 'Gen 11',
+  brand: 'ThinkPad',
+  category: 'Computer'
+})
+
+// Create a product with classification
+const shampoo = $.Product.create({
+  name: 'Moisturizing Shampoo',
+  description: 'Hair care product for dry hair',
+  brand: 'Example Brand',
+  gpc: {
+    segment: '50000000',
+    segmentName: 'Beauty/Personal Care/Hygiene',
+    family: '50100000',
+    familyName: 'Personal Hygiene Products',
+    class: '50101500',
+    className: 'Hair Care',
+    brick: '50101501',
+    brickName: 'Shampoo'
+  },
+  unspsc: '53131601',
+  wikidata: 'https://www.wikidata.org/wiki/Q163670',
+  wikipedia: 'https://en.wikipedia.org/wiki/Shampoo'
+})
+
+// Create a product with physical properties
+const desk = $.Product.create({
+  name: 'Standing Desk',
+  description: 'Adjustable height standing desk',
+  material: 'Wood and Steel',
+  color: 'Oak',
+  weight: { value: 50, unitCode: 'LB' },
+  width: { value: 60, unitCode: 'IN' },
+  depth: { value: 30, unitCode: 'IN' },
+  height: { value: 48, unitCode: 'IN', minValue: 28, maxValue: 48 }
+})
+```
+
+## Subtypes
+
+Product has numerous subtypes organized by GS1 GPC segments:
+
+- **Food/Beverage/Tobacco** - Consumable products
+- **Healthcare** - Medical and pharmaceutical products
+- **Beauty/Personal Care** - Personal care and hygiene products
+- **Technology/Computers** - Electronic and digital products
+- **Apparel** - Clothing and accessories
+- **Home/Garden** - Household and garden products
+- **Sports/Entertainment** - Sports equipment and entertainment products
+- **Automotive** - Vehicle and automotive products
+- **Industrial** - Industrial and manufacturing products
+
+## Resources
+
+- [Schema.org Product](https://schema.org/Product)
+- [GS1 GPC Browser](https://gpc-browser.gs1.org/)
+- [UNSPSC](https://www.ungm.org/public/unspsc)
+- [Wikidata Product (Q2424752)](https://www.wikidata.org/wiki/Q2424752)

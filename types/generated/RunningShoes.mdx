@@ -1,0 +1,85 @@
+---
+$id: https://products.org.ai/running-shoes
+$context: https://schema.org.ai
+$type: Product
+name: Running Shoes
+description: Athletic footwear designed specifically for running and jogging
+gpc:
+  segment: "30000000"
+  segmentName: "Apparel/Footwear/Accessories"
+  family: "30100000"
+  familyName: "Footwear"
+  class: "30101000"
+  className: "Athletic Footwear"
+  brick: "30101001"
+  brickName: "Running Shoes"
+unspsc: "53101608"
+wikidata: https://www.wikidata.org/wiki/Q1155704
+wikipedia: https://en.wikipedia.org/wiki/Running_shoe
+digital: 0.3
+category: Product
+---
+
+[Thing](https://schema.org.ai/Thing) > [Product](../Product.mdx) > Apparel/Footwear/Accessories
+
+# Running Shoes
+
+Athletic footwear designed specifically for running and jogging
+
+## Properties
+
+| Property | Type | Description | Inherited From |
+|----------|------|-------------|----------------|
+| name | Text | The name of the product | Thing |
+| description | Text | A description of the product | Thing |
+| brand | Brand \| Organization | The brand associated with the product | Product |
+| manufacturer | Organization | The manufacturer of the product | Product |
+| model | Text | The model of the product | Product |
+| productID | Text | The product identifier | Product |
+| category | Text \| Thing | Category of the product | Product |
+| material | Text \| URL | Material the product is made from | Product |
+| color | Text | The color of the product | Product |
+| image | URL | An image of the product | Product |
+
+## Classification
+
+- **GS1 GPC**: 30101001 (Apparel/Footwear/Accessories > Footwear > Athletic Footwear > Running Shoes)
+- **UNSPSC**: 53101608
+- **Wikidata**: [Q1155704](https://www.wikidata.org/wiki/Q1155704)
+- **Wikipedia**: [Running Shoes](https://en.wikipedia.org/wiki/Running_shoe)
+
+## Examples
+
+```typescript
+import { $ } from 'products.org.ai'
+
+// Create a basic running shoes
+const runningShoes = $.RunningShoes.create({
+  name: 'Example Running Shoes',
+  description: 'Athletic footwear designed specifically for running and jogging',
+  brand: 'Example Brand',
+  manufacturer: 'Example Manufacturer'
+})
+
+// With additional properties
+const detailedRunningShoes = $.RunningShoes.create({
+  name: 'Premium Running Shoes',
+  description: 'Premium version with enhanced features',
+  brand: 'Premium Brand',
+  manufacturer: 'Premium Manufacturer',
+  model: 'PRO-2024',
+  productID: 'PROD-12345',
+  category: 'Athletic Footwear',
+  image: 'https://example.com/image.jpg'
+})
+
+// Query running shoes products
+const allRunningShoess = $.RunningShoes.find()
+```
+
+## Resources
+
+- [Schema.org Product](https://schema.org/Product)
+- [GS1 GPC Browser](https://gpc-browser.gs1.org/)
+- [Wikidata: Running Shoes (Q1155704)](https://www.wikidata.org/wiki/Q1155704)
+- [Wikipedia: Running Shoes](https://en.wikipedia.org/wiki/Running_shoe)

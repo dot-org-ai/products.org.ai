@@ -1,0 +1,85 @@
+---
+$id: https://products.org.ai/coffee
+$context: https://schema.org.ai
+$type: Product
+name: Coffee
+description: Roasted coffee beans or ground coffee for brewing beverages
+gpc:
+  segment: "10000000"
+  segmentName: "Food/Beverage/Tobacco"
+  family: "10100000"
+  familyName: "Beverages"
+  class: "10101000"
+  className: "Coffee and Tea"
+  brick: "10101001"
+  brickName: "Coffee"
+unspsc: "50201713"
+wikidata: https://www.wikidata.org/wiki/Q8486
+wikipedia: https://en.wikipedia.org/wiki/Coffee
+digital: 0.1
+category: Product
+---
+
+[Thing](https://schema.org.ai/Thing) > [Product](../Product.mdx) > Food/Beverage/Tobacco
+
+# Coffee
+
+Roasted coffee beans or ground coffee for brewing beverages
+
+## Properties
+
+| Property | Type | Description | Inherited From |
+|----------|------|-------------|----------------|
+| name | Text | The name of the product | Thing |
+| description | Text | A description of the product | Thing |
+| brand | Brand \| Organization | The brand associated with the product | Product |
+| manufacturer | Organization | The manufacturer of the product | Product |
+| model | Text | The model of the product | Product |
+| productID | Text | The product identifier | Product |
+| category | Text \| Thing | Category of the product | Product |
+| material | Text \| URL | Material the product is made from | Product |
+| color | Text | The color of the product | Product |
+| image | URL | An image of the product | Product |
+
+## Classification
+
+- **GS1 GPC**: 10101001 (Food/Beverage/Tobacco > Beverages > Coffee and Tea > Coffee)
+- **UNSPSC**: 50201713
+- **Wikidata**: [Q8486](https://www.wikidata.org/wiki/Q8486)
+- **Wikipedia**: [Coffee](https://en.wikipedia.org/wiki/Coffee)
+
+## Examples
+
+```typescript
+import { $ } from 'products.org.ai'
+
+// Create a basic coffee
+const coffee = $.Coffee.create({
+  name: 'Example Coffee',
+  description: 'Roasted coffee beans or ground coffee for brewing beverages',
+  brand: 'Example Brand',
+  manufacturer: 'Example Manufacturer'
+})
+
+// With additional properties
+const detailedCoffee = $.Coffee.create({
+  name: 'Premium Coffee',
+  description: 'Premium version with enhanced features',
+  brand: 'Premium Brand',
+  manufacturer: 'Premium Manufacturer',
+  model: 'PRO-2024',
+  productID: 'PROD-12345',
+  category: 'Coffee and Tea',
+  image: 'https://example.com/image.jpg'
+})
+
+// Query coffee products
+const allCoffees = $.Coffee.find()
+```
+
+## Resources
+
+- [Schema.org Product](https://schema.org/Product)
+- [GS1 GPC Browser](https://gpc-browser.gs1.org/)
+- [Wikidata: Coffee (Q8486)](https://www.wikidata.org/wiki/Q8486)
+- [Wikipedia: Coffee](https://en.wikipedia.org/wiki/Coffee)

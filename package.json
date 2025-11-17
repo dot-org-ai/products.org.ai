@@ -1,0 +1,51 @@
+{
+  "name": "products.org.ai",
+  "version": "0.1.0",
+  "description": "Comprehensive product ontology for the semantic web",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "license": "CC-BY-SA-4.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dot-org-ai/products.org.ai.git"
+  },
+  "homepage": "https://products.org.ai",
+  "bugs": {
+    "url": "https://github.com/dot-org-ai/products.org.ai/issues"
+  },
+  "keywords": [
+    "ontology",
+    "schema",
+    "semantic-web",
+    "products",
+    "gpc",
+    "gs1",
+    "unspsc",
+    "wikidata",
+    "schema.org",
+    "typescript"
+  ],
+  "scripts": {
+    "build": "mdxe build",
+    "dev": "mdxe dev",
+    "generate": "node scripts/generate.js",
+    "generate:samples": "node scripts/generate-samples.js",
+    "validate": "mdxe validate",
+    "test": "jest",
+    "lint": "eslint .",
+    "format": "prettier --write ."
+  },
+  "dependencies": {
+    "@org.ai/schema": "*"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.3.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

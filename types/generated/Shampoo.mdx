@@ -1,0 +1,85 @@
+---
+$id: https://products.org.ai/shampoo
+$context: https://schema.org.ai
+$type: Product
+name: Shampoo
+description: Hair cleaning and conditioning product designed to remove dirt, oil, and buildup from hair
+gpc:
+  segment: "50000000"
+  segmentName: "Beauty/Personal Care/Hygiene"
+  family: "50100000"
+  familyName: "Personal Hygiene Products"
+  class: "50101500"
+  className: "Hair Care"
+  brick: "50101501"
+  brickName: "Shampoo"
+unspsc: "53131601"
+wikidata: https://www.wikidata.org/wiki/Q163670
+wikipedia: https://en.wikipedia.org/wiki/Shampoo
+digital: 0.2
+category: Product
+---
+
+[Thing](https://schema.org.ai/Thing) > [Product](../Product.mdx) > Beauty/Personal Care/Hygiene
+
+# Shampoo
+
+Hair cleaning and conditioning product designed to remove dirt, oil, and buildup from hair
+
+## Properties
+
+| Property | Type | Description | Inherited From |
+|----------|------|-------------|----------------|
+| name | Text | The name of the product | Thing |
+| description | Text | A description of the product | Thing |
+| brand | Brand \| Organization | The brand associated with the product | Product |
+| manufacturer | Organization | The manufacturer of the product | Product |
+| model | Text | The model of the product | Product |
+| productID | Text | The product identifier | Product |
+| category | Text \| Thing | Category of the product | Product |
+| material | Text \| URL | Material the product is made from | Product |
+| color | Text | The color of the product | Product |
+| image | URL | An image of the product | Product |
+
+## Classification
+
+- **GS1 GPC**: 50101501 (Beauty/Personal Care/Hygiene > Personal Hygiene Products > Hair Care > Shampoo)
+- **UNSPSC**: 53131601
+- **Wikidata**: [Q163670](https://www.wikidata.org/wiki/Q163670)
+- **Wikipedia**: [Shampoo](https://en.wikipedia.org/wiki/Shampoo)
+
+## Examples
+
+```typescript
+import { $ } from 'products.org.ai'
+
+// Create a basic shampoo
+const shampoo = $.Shampoo.create({
+  name: 'Example Shampoo',
+  description: 'Hair cleaning and conditioning product designed to remove dirt, oil, and buildup from hair',
+  brand: 'Example Brand',
+  manufacturer: 'Example Manufacturer'
+})
+
+// With additional properties
+const detailedShampoo = $.Shampoo.create({
+  name: 'Premium Shampoo',
+  description: 'Premium version with enhanced features',
+  brand: 'Premium Brand',
+  manufacturer: 'Premium Manufacturer',
+  model: 'PRO-2024',
+  productID: 'PROD-12345',
+  category: 'Hair Care',
+  image: 'https://example.com/image.jpg'
+})
+
+// Query shampoo products
+const allShampoos = $.Shampoo.find()
+```
+
+## Resources
+
+- [Schema.org Product](https://schema.org/Product)
+- [GS1 GPC Browser](https://gpc-browser.gs1.org/)
+- [Wikidata: Shampoo (Q163670)](https://www.wikidata.org/wiki/Q163670)
+- [Wikipedia: Shampoo](https://en.wikipedia.org/wiki/Shampoo)

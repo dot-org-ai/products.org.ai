@@ -1,0 +1,85 @@
+---
+$id: https://products.org.ai/laptop-computer
+$context: https://schema.org.ai
+$type: Product
+name: Laptop Computer
+description: Portable personal computer with integrated screen, keyboard, and battery
+gpc:
+  segment: "40000000"
+  segmentName: "Technology/Computers"
+  family: "43210000"
+  familyName: "Computer Equipment and Accessories"
+  class: "43211500"
+  className: "Computers"
+  brick: "43211501"
+  brickName: "Laptop Computers"
+unspsc: "43211503"
+wikidata: https://www.wikidata.org/wiki/Q3962
+wikipedia: https://en.wikipedia.org/wiki/Laptop
+digital: 0.9
+category: Product
+---
+
+[Thing](https://schema.org.ai/Thing) > [Product](../Product.mdx) > Technology/Computers
+
+# Laptop Computer
+
+Portable personal computer with integrated screen, keyboard, and battery
+
+## Properties
+
+| Property | Type | Description | Inherited From |
+|----------|------|-------------|----------------|
+| name | Text | The name of the product | Thing |
+| description | Text | A description of the product | Thing |
+| brand | Brand \| Organization | The brand associated with the product | Product |
+| manufacturer | Organization | The manufacturer of the product | Product |
+| model | Text | The model of the product | Product |
+| productID | Text | The product identifier | Product |
+| category | Text \| Thing | Category of the product | Product |
+| material | Text \| URL | Material the product is made from | Product |
+| color | Text | The color of the product | Product |
+| image | URL | An image of the product | Product |
+
+## Classification
+
+- **GS1 GPC**: 43211501 (Technology/Computers > Computer Equipment and Accessories > Computers > Laptop Computers)
+- **UNSPSC**: 43211503
+- **Wikidata**: [Q3962](https://www.wikidata.org/wiki/Q3962)
+- **Wikipedia**: [Laptop Computer](https://en.wikipedia.org/wiki/Laptop)
+
+## Examples
+
+```typescript
+import { $ } from 'products.org.ai'
+
+// Create a basic laptop computer
+const laptopComputer = $.LaptopComputer.create({
+  name: 'Example Laptop Computer',
+  description: 'Portable personal computer with integrated screen, keyboard, and battery',
+  brand: 'Example Brand',
+  manufacturer: 'Example Manufacturer'
+})
+
+// With additional properties
+const detailedLaptopComputer = $.LaptopComputer.create({
+  name: 'Premium Laptop Computer',
+  description: 'Premium version with enhanced features',
+  brand: 'Premium Brand',
+  manufacturer: 'Premium Manufacturer',
+  model: 'PRO-2024',
+  productID: 'PROD-12345',
+  category: 'Computers',
+  image: 'https://example.com/image.jpg'
+})
+
+// Query laptop computer products
+const allLaptopComputers = $.LaptopComputer.find()
+```
+
+## Resources
+
+- [Schema.org Product](https://schema.org/Product)
+- [GS1 GPC Browser](https://gpc-browser.gs1.org/)
+- [Wikidata: Laptop Computer (Q3962)](https://www.wikidata.org/wiki/Q3962)
+- [Wikipedia: Laptop Computer](https://en.wikipedia.org/wiki/Laptop)

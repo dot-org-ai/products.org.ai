@@ -1,0 +1,67 @@
+---
+title: Smartphone
+description: Smartphones - Mobile Devices product
+---
+
+import { Breadcrumb, BreadcrumbItem } from 'fumadocs-ui/components/breadcrumb'
+import { Tabs, Tab } from 'fumadocs-ui/components/tabs'
+import { Callout } from 'fumadocs-ui/components/callout'
+
+<Breadcrumb>
+  <BreadcrumbItem href="/">Home</BreadcrumbItem>
+  <BreadcrumbItem href="/TechnologyComputers">Technology Computers</BreadcrumbItem>
+  <BreadcrumbItem href="/MobileDevices">Mobile Devices</BreadcrumbItem>
+  <BreadcrumbItem>Smartphone</BreadcrumbItem>
+</Breadcrumb>
+
+# Smartphone
+
+Smartphones - Mobile Devices product
+
+## Classification
+
+<Tabs items={['GS1 GPC', 'UNSPSC', 'Wikidata']}>
+  <Tab value="GS1 GPC">
+    - **Segment**: 40000000 - Technology/Computers
+    - **Family**: 43210000 - Computer Equipment and Accessories
+    - **Class**: 43211600 - Mobile Devices
+    - **Brick**: 43211601 - Smartphones
+  </Tab>
+  <Tab value="UNSPSC">
+    **Code**: 43191501
+  </Tab>
+  <Tab value="Wikidata">
+    - **QID**: [Q22645](https://www.wikidata.org/wiki/Q22645)
+    - **Wikipedia**: [Smartphone](https://en.wikipedia.org/wiki/Smartphone)
+  </Tab>
+</Tabs>
+
+## Usage
+
+<Tabs items={['TypeScript', 'JavaScript']}>
+  <Tab value="TypeScript">
+    ```typescript
+    import { $ } from 'products.org.ai'
+
+    const smartphone = $.Smartphone.create({
+      name: 'Example Smartphone',
+      brand: 'Example Brand'
+    })
+    ```
+  </Tab>
+  <Tab value="JavaScript">
+    ```javascript
+    const { $ } = require('products.org.ai')
+
+    const smartphone = $.Smartphone.create({
+      name: 'Example Smartphone'
+    })
+    ```
+  </Tab>
+</Tabs>
+
+## Digital Score
+
+<Callout type="info">
+  **Digital Score**: 1 / 1.0
+</Callout>
