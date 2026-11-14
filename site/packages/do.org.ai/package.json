@@ -1,6 +1,7 @@
 {
   "name": "do.org.ai",
   "version": "0.2.0",
+  "private": true,
   "description": "Shared Next.js base package for .org.ai ontology sites",
   "type": "module",
   "main": "./src/index.ts",
@@ -8,43 +9,7 @@
   "exports": {
     ".": "./src/index.ts",
     "./app/*": "./src/app/*.tsx",
-    "./app/middleware": "./src/app/middleware.ts",
     "./lib/get-llm-text": "./src/lib/get-llm-text.ts",
-    "./lib/*": "./src/lib/*",
-    "./templates/*": "./src/templates/*",
-    "./templates/next-config": "./src/templates/next-config.ts",
-    "./templates/vercel-config": "./src/templates/vercel-config.ts",
-    "./cli": "./src/cli/index.ts"
-  },
-  "bin": {
-    "create-org-ai-app": "./src/cli/index.ts"
-  },
-  "scripts": {
-    "typecheck": "tsc --noEmit",
-    "test": "vitest run",
-    "test:watch": "vitest watch"
-  },
-  "dependencies": {
-    "fumadocs-core": "catalog:",
-    "fumadocs-mdx": "catalog:",
-    "fumadocs-openapi": "catalog:",
-    "fumadocs-typescript": "catalog:",
-    "fumadocs-ui": "catalog:",
-    "next": "catalog:",
-    "react": "catalog:",
-    "react-dom": "catalog:",
-    "tailwindcss": "catalog:"
-  },
-  "devDependencies": {
-    "@types/node": "catalog:",
-    "@types/react": "catalog:",
-    "@types/react-dom": "catalog:",
-    "typescript": "catalog:",
-    "vitest": "catalog:"
-  },
-  "peerDependencies": {
-    "next": "catalog:",
-    "react": "catalog:",
-    "react-dom": "catalog:"
+    "./templates/*": "./src/templates/*"
   }
 }
